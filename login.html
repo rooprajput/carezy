@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="assets/logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<title>Sign in | Carezy</title>
+</head>
+<body>
+<main class="wrap"><div class="card auth">
+  <h1 style="font-size:2rem">Sign in</h1><br>
+  <div class="tabs">
+    <button class="tab on" data-role="patient" type="button">Patient</button>
+    <button class="tab" data-role="doctor" type="button">Doctor</button>
+  </div>
+  <form id="patientForm" novalidate>
+    <label for="pname">Full name</label><input id="pname" autocomplete="name">
+    <label for="pphone">Mobile number</label><input id="pphone" inputmode="numeric" maxlength="10" placeholder="10-digit number">
+    <br><button class="btn">Continue as patient</button>
+  </form>
+  <form id="doctorForm" novalidate style="display:none">
+    <label for="docSel">Doctor</label><select id="docSel"></select>
+    <label for="pass">Password</label><input id="pass" type="password" autocomplete="current-password">
+    <p class="muted" style="font-size:.85rem;margin-top:.4rem">Demo password: doctor123</p>
+    <br><button class="btn">Sign in as doctor</button>
+  </form>
+  <p class="err" id="err" role="alert"></p>
+</div></main>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

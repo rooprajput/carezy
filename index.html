@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="assets/logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<title>Carezy | Book a doctor online</title>
+</head>
+<body>
+<main class="wrap">
+  <div class="hero">
+    <h1>See the right doctor, without the waiting room.</h1>
+    <p>Compare doctors, pick a time that suits you and get a confirmed booking in under a minute.</p>
+    <form class="search" action="doctors.html">
+      <select name="spec" aria-label="Specialty"><option value="All">All specialties</option></select>
+      <button class="btn">Find doctors</button>
+    </form>
+    <svg class="ecg" viewBox="0 0 600 70" aria-hidden="true"><path d="M0 40H150l12-24 14 50 14-38 10 12H330l12-24 14 50 14-38 10 12H600"/></svg>
+  </div>
+
+  <section>
+    <h2>Top rated doctors</h2>
+    <div class="grid" id="list" data-limit="3"></div><br>
+    <a class="btn ghost" href="doctors.html">See all doctors</a>
+  </section>
+
+  <section>
+    <h2>How it works</h2>
+    <div class="steps">
+      <div><h3>Choose a doctor</h3><p class="muted">Filter by specialty and compare fees and ratings.</p></div>
+      <div><h3>Pick a slot</h3><p class="muted">Booked times are greyed out so you never double book.</p></div>
+      <div><h3>Get confirmation</h3><p class="muted">Receive a booking ID and manage it under My appointments.</p></div>
+    </div>
+  </section>
+</main>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/doctors.js"></script>
+<script>
+  const s = document.querySelector(".search select");
+  SPECIALTIES.forEach(x => s.add(new Option(x, x)));
+</script>
+</body>
+</html>

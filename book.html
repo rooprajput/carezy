@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="assets/logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<title>Book appointment | Carezy</title>
+</head>
+<body>
+<main class="wrap">
+  <h1>Book an appointment</h1>
+  <div class="book">
+    <div class="card" id="formWrap">
+      <form id="form" novalidate>
+        <label for="doctor">Doctor</label><select id="doctor"></select>
+        <label for="date">Date</label><input type="date" id="date">
+        <label>Time slot</label><div class="slots" id="slots"></div>
+        <label for="name">Patient name</label><input id="name" placeholder="Full name" autocomplete="name">
+        <label for="phone">Mobile number</label><input id="phone" placeholder="10-digit number" inputmode="numeric" maxlength="10">
+        <label for="reason">Reason for visit (optional)</label><textarea id="reason" rows="2"></textarea>
+        <p class="err" id="err" role="alert"></p>
+        <button class="btn">Confirm booking</button>
+      </form>
+    </div>
+    <aside><div class="card"><h3>Your booking</h3><ul class="sum" id="sum"></ul></div></aside>
+  </div>
+  <div class="card ok" id="done">
+    <h2>Booking confirmed</h2>
+    <p id="doneText"></p>
+    <p>Your booking ID is <b id="ref"></b></p><br>
+    <a class="btn" href="appointments.html">View my appointments</a>
+  </div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

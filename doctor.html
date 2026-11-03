@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="assets/logo.svg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<title>Doctor dashboard | Carezy</title>
+</head>
+<body>
+<main class="wrap">
+  <h1>Doctor dashboard</h1>
+  <p class="muted" id="hello"></p>
+  <div class="stats" id="stats"></div>
+  <div class="chips" id="chips">
+    <button class="chip on" data-f="Booked">Upcoming</button>
+    <button class="chip" data-f="Completed">Completed</button>
+    <button class="chip" data-f="Cancelled">Cancelled</button>
+    <button class="chip" data-f="All">All</button>
+  </div>
+  <div id="appts" style="margin-top:1.2rem"></div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/doctor.js"></script>
+</body>
+</html>
